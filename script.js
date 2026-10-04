@@ -12,10 +12,10 @@ let enemyTimer = 0;
 let cloudTimer = 0;
 
 const playerImg = new Image();
-playerImg.src = "assets/dli-character.png";
+playerImg.src = "dli-character.png";
 
 const enemyImg = new Image();
-enemyImg.src = "assets/enemy-plane.png";
+enemyImg.src = "enemy-plane.png";
 
 const player = {
     x: 0,
