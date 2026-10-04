@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #020617;
+    font-family: Arial, sans-serif;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    position: fixed;
+    inset: 0;
+}
+
+#gameCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: none;
+}
+
+#gameUI {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#score,
+#lives,
+#level {
+    position: absolute;
+    top: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+#score {
+    left: 16px;
+}
+
+#lives {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+#level {
+    right: 16px;
+}
+
+#startButton,
+#pauseButton,
+#restartButton {
+    position: absolute;
+    pointer-events: auto;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    background: rgba(15, 23, 42, 0.88);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    touch-action: manipulation;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+}
+
+#startButton {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pauseButton {
+    left: 16px;
+    bottom: 18px;
+}
+
+#restartButton {
+    right: 16px;
+    bottom: 18px;
+}
+
+#startButton:active,
+#pauseButton:active,
+#restartButton:active {
+    transform: scale(0.95);
+}
+
+#startButton:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+@media (max-width: 600px) {
+    #score,
+    #lives,
+    #level {
+        top: 10px;
+        font-size: 14px;
+        padding: 7px 9px;
+    }
+
+    #score {
+        left: 10px;
+    }
+
+    #level {
+        right: 10px;
+    }
+
+    #startButton,
+    #pauseButton,
+    #restartButton {
+        font-size: 14px;
+        padding: 11px 14px;
+    }
+
+    #pauseButton {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    #restartButton {
+        right: 10px;
+        bottom: 10px;
+    }
+}
